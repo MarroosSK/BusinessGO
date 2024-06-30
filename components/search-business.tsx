@@ -1,6 +1,6 @@
 "use client";
 
-import { Search, X } from "lucide-react";
+import { X } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useDebounce } from "use-debounce";
@@ -33,27 +33,22 @@ const SearchBusiness = () => {
 
   return (
     <div className=" py-[10px] flex flex-col items-center ">
-      <div className="mb-[72px] flex flex-col items-center">
-        <h2 className=" text-[#6b2615] text-center text-[2.5rem] font-extrabold m-0 leading-[4rem]">
-          Search business
-        </h2>
-      </div>
       <div className="flex flex-col sm:flex-row items-center gap-3 py-4">
         <Input
           type="text"
           name="query"
           placeholder="'e.g: California, Warsaw'"
-          className="z-[6] outline-none p-5 text-[#ff5b31]   font-bold"
+          className=" outline-none p-5 text-[#ff5b31]   font-bold"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           required
         />
-        <div className="z-[6] h-[46px]  border-l-[#ff5b31] border-l-4 mx-4"></div>
+        <div className="hidden sm:block h-[46px]  border-l-[#ff5b31] border-l-4 mx-4"></div>
         <Input
           type="text"
           name="query"
           placeholder="'e.g: food, cars'"
-          className="z-[6] outline-none p-5  text-[#ff5b31] font-bold"
+          className=" outline-none p-5  text-[#ff5b31] font-bold"
           value={term}
           onChange={(e) => setTerm(e.target.value)}
           required
@@ -61,11 +56,11 @@ const SearchBusiness = () => {
         {showRemove && (
           <Button
             variant="default"
-            className="z-[6]  bg-[#6b2615] hover:bg-[#6b2615]/75  transition-all ease-in-out rounded-lg cursor-pointer"
+            className="  bg-[#6b2615] hover:bg-[#6b2615]/75  transition-all ease-in-out rounded-lg cursor-pointer"
             asChild
             onClick={removeFields}
           >
-            <X className="z-[6] w-32 " />
+            <X className=" w-32 " />
           </Button>
         )}
       </div>

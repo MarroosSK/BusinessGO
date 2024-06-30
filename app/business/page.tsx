@@ -1,12 +1,10 @@
 "use client";
 
-import { BusinessDataI } from "@/types/types";
-import { useState, useEffect } from "react";
-import { getBusinesses } from "../actions/get-businesses";
-import SearchBusiness from "@/components/search-business";
 import BusinessList from "@/components/business-list";
-import Image from "next/image";
-import Vector from "../../public/Vector.png";
+import SearchBusiness from "@/components/search-business";
+import { BusinessDataI } from "@/types/types";
+import { useEffect, useState } from "react";
+import { getBusinesses } from "../actions/get-businesses";
 
 const BusinessPage = ({
   searchParams,
@@ -42,11 +40,11 @@ const BusinessPage = ({
 
   return (
     <div className="relative">
-      <Image
+      {/* <Image
         src={Vector}
         alt="home-bg"
         className="absolute top-0 left-0 w-full h-full object-cover"
-      />
+      /> */}
       <SearchBusiness />
       {!showData ? (
         <div className="flex items-center justify-center py-10 text-[#6b2615] text-lg">

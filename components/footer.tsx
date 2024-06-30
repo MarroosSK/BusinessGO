@@ -5,9 +5,9 @@ const Footer = () => {
       <div className="container">
         <div className=" flex flex-col sm:flex-row items-center justify-between">
           <div className=" flex flex-col  justify-center">
-            <div className="flex flex-row items-center justify-center sm:justify-start animate-breeze">
+            <div className="flex flex-row items-center justify-center sm:justify-start">
               <div className="leading-[20px]">
-                <h2 className="text-[25px] text-[#ff5b31] font-semibold tracking-widest animate-breeze">
+                <h2 className="text-[25px] text-[#ff5b31] font-semibold tracking-widest">
                   Business<span className="text-[#6b2615] font-bold">GO</span>
                 </h2>
               </div>

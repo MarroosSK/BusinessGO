@@ -1,27 +1,29 @@
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 import Link from "next/link";
-import Vector from "../public/Vector.png";
 
 export default function Home() {
   return (
     <>
-      <div className="relative container flex flex-col min-h-screen items-center justify-center">
-        <Image
+      <div className=" container flex flex-col min-h-screen items-center justify-center">
+        {/* <Image
           src={Vector}
           alt="home-bg"
           className="absolute top-0 left-0 w-full h-full object-cover"
-        />
+        /> */}
 
         <div className="z-[1] flex flex-col items-center justify-center">
-          <>
-            <h1 className="z-[3] text-[#6b2615] text-center text-[3.2rem] md:text-[4.5rem] font-extrabold m-0 leading-[4rem]  animate-breeze">
+          <div className="relative">
+            <img
+              src="./cloud.png"
+              className="absolute -top-32 right-0 z-[6] animate-breeze"
+            />
+            <h1 className=" text-[#6b2615] text-center text-[3.2rem] md:text-[4.5rem] font-extrabold m-0 leading-[4rem]">
               Connect with great
             </h1>
-            <h1 className="z-[3] text-[#6b2615] text-center  text-[3.2rem] md:text-[4.5rem] font-extrabold  m-0 leading-[4rem] animate-breeze">
+            <h1 className=" text-[#6b2615] text-center  text-[3.2rem] md:text-[4.5rem] font-extrabold  m-0 leading-[4rem]">
               <span className="text-[#ff5b31] ">local</span> businesses
             </h1>
-          </>
+          </div>
 
           <p className={` text-[#6b2615] mt-12 font-normal text-sm md:text-lg`}>
             Restaurants, Dentists, Bars, Beauty Salons, Doctors, ...
